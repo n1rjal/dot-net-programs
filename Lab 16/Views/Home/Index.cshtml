@@ -1,0 +1,49 @@
+﻿@model Lab_16.Models.Employee;
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+@using (Html.BeginForm())
+{
+    <p>
+        @Html.LabelFor(model => model.EmployeeId)&nbsp;
+    @Html.TextBoxFor(model => model.EmployeeId, "", new
+    {
+        @class =
+   "form-control"
+    })
+</p>
+<p>
+    @Html.ValidationMessageFor(model => model.EmployeeId)
+</p>
+<p>
+    @Html.LabelFor(model => model.EmployeeName)&nbsp;
+    @Html.TextBoxFor(model => model.EmployeeName)
+</p>
+<p>
+    @Html.ValidationMessageFor(model => model.EmployeeName)
+</p>
+<p>
+    @Html.LabelFor(model => model.EmployeeAge)&nbsp;
+    @Html.TextBoxFor(model => model.EmployeeAge)
+</p>
+<p>
+    @Html.ValidationMessageFor(model => model.EmployeeAge)
+</p>
+<p>
+    @Html.LabelFor(model => model.EmployeeGender)&nbsp;
+    @Html.TextBoxFor(model => model.EmployeeGender)
+</p>
+<p>
+    @Html.ValidationMessageFor(model => model.EmployeeGender)
+</p>
+<p>
+    @Html.LabelFor(model => model.EmployeeEmail)&nbsp;
+    @Html.TextBoxFor(model => model.EmployeeEmail)
+</p>
+<p>
+    @Html.ValidationMessageFor(model => model.EmployeeEmail)
+</p>
+<input type="submit" value="submit" />
+@Html.Raw(ViewData["SuccessMessage"])
+}

@@ -1,0 +1,28 @@
+﻿@*
+     For more information on enabling MVC for empty projects, visit
+    https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Lab 13";
+    int age = 22;
+}
+<h2>Nirjal Paudel</h2>
+<p>Age : @age</p>
+@{
+
+    if (age < 20)
+    {
+        <h2>Teenage</h2>
+    }
+    else
+    {
+        <h2>Not Teenage</h2>
+    }
+}
+@{
+    string[] players = { "Ronaldo", "Messi", "Benzema", "Vinicius" };
+    foreach (string player in players)
+    {
+        <h3>@player</h3>
+    }
+}
